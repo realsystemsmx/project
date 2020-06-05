@@ -146,7 +146,8 @@ class Project(models.Model):
 
         key = []
         for item in data:
-            key.append(item[0].upper())
+            if len(item)>0:
+                key.append(item[0].upper())
         return "".join(key)
 
     @api.multi
